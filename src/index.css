@@ -1,3 +1,9 @@
+@font-face {
+  font-family: clashDisplay;
+  src: url("assets/ClashDisplay-Variable.ttf");
+  font-display: auto;
+}
+
 body {
   margin: 0;
   font-family: clashDisplay;
