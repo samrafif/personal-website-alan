@@ -1,15 +1,24 @@
 @font-face {
   font-family: clashDisplay;
-  src: url("ClashDisplay-Variable.ttf");
+  src: url("assets/ClashDisplay-Variable.ttf");
 }
 
 .App-header {
-  background: rgb(70, 0, 0);
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(to left top, #0b004b, #48005a);
+  background: -moz-linear-gradient(to left top, #0b004b, #48005a);
+  background: -ms-linear-gradient(to left top, #0b004b, #48005a);
+  background: -o-linear-gradient(to left top, #0b004b, #48005a);
+  background: linear-gradient(to left top, #0b004b, #48005a); */
+  background: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: 0;
@@ -37,6 +46,7 @@
 .nav-bar {
   animation: 1s ease-out 0s 1 slideInFromLeft;
   left: 94%;
+  top: 15%;
   vertical-align: middle;
   float: left;
   writing-mode: tb-rl; /*IE*/
@@ -93,7 +103,18 @@ li {
   gap: 20px;
   position: absolute;
   right: 3%;
-  top: 2%;
+  top: 3%;
+}
+
+.socials > a {
+  text-decoration: none;
+  color: white;
+  transition: 500ms;
+}
+
+.socials > a:hover {
+  color: rgb(190, 190, 190);
+  font-size: 36px;
 }
 
 .main-text {
@@ -118,7 +139,7 @@ li {
 }
 
 .container {
-  padding-top: 5rem;
+  padding-top: 15rem;
   padding-left: 3rem;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -126,12 +147,13 @@ li {
 }
 
 .image-m {
-  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-left: 1rem;
   z-index: 1;
 }
 
 .details {
-  margin-right: 20rem;
+  margin-right: 30rem;
   font-size: 24px;
 }
 
@@ -139,6 +161,14 @@ li {
   position: absolute;
   left: 3%;
   top: 5%;
+}
+
+.project-text {
+  display: flex;
+  gap: 5px;
+  padding-left: 3rem;
+  padding-bottom: 0;
+  line-height: 0px;
 }
 
 @media only screen and (max-width: 768px) {
