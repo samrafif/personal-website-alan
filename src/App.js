@@ -10,6 +10,7 @@ import Logo from "./assets/Group 15.png";
 import MainHeader from "./components/mainheader";
 import NotFound from "./pages/404";
 import Projects from "./pages/projects";
+import ReadMe from "./pages/readme";
 
 function App() {
   const location = useLocation();
@@ -112,6 +113,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<MainHeader />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
+            <Route path="/readme" element={<ReadMe />}></Route>
             <Route path="/*" element={<NotFound />}></Route>
           </Routes>
         </AnimatePresence>

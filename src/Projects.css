@@ -1,0 +1,48 @@
+.project-text {
+  display: flex;
+  gap: 5px;
+  padding-left: 3rem;
+  padding-bottom: 0;
+  line-height: 0px;
+}
+
+.project-name {
+  transition: 500ms;
+  font-size: 58px;
+  font-weight: 200;
+}
+
+.project-name:hover {
+  font-weight: 700;
+}
+
+.project-year {
+  padding-top: 2rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.project-desc {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 945px) {
+  .project-text {
+    display: flex;
+    gap: 5px;
+    padding-left: 2rem;
+    padding-bottom: 0;
+    line-height: 0px;
+  }
+
+  .project-name {
+    font-size: 28px;
+  }
+
+  .project-year {
+    padding-top: 1rem;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}

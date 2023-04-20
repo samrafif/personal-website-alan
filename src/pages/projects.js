@@ -1,14 +1,19 @@
 import { motion } from "framer-motion";
+import "../Projects.css";
 
 function Projects() {
   const projects = [
     {
       name: "DIY DL FRAMEWORK",
       year: "2022",
+      shortdesc: "lorem ipsum dolor sit amet",
+      url: "/a",
     },
     {
       name: "DISCORD BOT",
       year: "2022",
+      shortdesc: "lorem ipsum sok asik amet lu",
+      url: "/b",
     },
   ];
   return (
@@ -20,9 +25,12 @@ function Projects() {
     >
       <div style={{ paddingTop: "10rem" }}>
         {projects.map((a) => (
-          <div className="project-text">
-            <h1>{a.name}</h1>
-            <p style={{ paddingTop: "2rem", fontSize: "20px" }}>/{a.year}</p>
+          <div key={a.name} className="project-text">
+            <a href={a.url} style={{ textDecoration: "none", color: "white" }}>
+              <p className="project-name">{a.name}</p>
+              <p className="project-desc">{a.shortdesc}</p>
+              <p className="project-year">/{a.year}</p>
+            </a>
           </div>
         ))}
       </div>
