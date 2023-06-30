@@ -1,15 +1,27 @@
+:root {
+  --init-col: #0b004b;
+  --end-col: #48005a;
+}
+
 .App-header {
-  /* -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background: -webkit-linear-gradient(to left top, #0b004b, #48005a);
-  background: -moz-linear-gradient(to left top, #0b004b, #48005a);
-  background: -ms-linear-gradient(to left top, #0b004b, #48005a);
-  background: -o-linear-gradient(to left top, #0b004b, #48005a);
-  background: linear-gradient(to left top, #0b004b, #48005a); */
-  background: black;
+  background: -webkit-linear-gradient(
+    to left top,
+    var(--init-col),
+    var(--end-col)
+  );
+  background: -moz-linear-gradient(
+    to left top,
+    var(--init-col),
+    var(--end-col)
+  );
+  background: -ms-linear-gradient(to left top, var(--init-col), var(--end-col));
+  background: -o-linear-gradient(to left top, var(--init-col), var(--end-col));
+  background: linear-gradient(to left top, var(--init-col), var(--end-col));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,6 +60,7 @@
   writing-mode: vertical-lr; /* OPera/webkit*/
   writing-mode: sideways-lr; /* should be the one */
   position: fixed;
+  z-index: 2;
 }
 
 li {
@@ -93,6 +106,7 @@ li {
   text-align: left;
   user-select: none;
   pointer-events: none;
+  z-index: 0;
 }
 
 .socials {
@@ -100,18 +114,19 @@ li {
   gap: 20px;
   position: absolute;
   right: 3%;
-  top: 3%;
+  top: 4%;
 }
 
 .socials > a {
   text-decoration: none;
   color: white;
   transition: 500ms;
+  font-weight: 300;
 }
 
 .socials > a:hover {
   color: rgb(190, 190, 190);
-  font-size: 36px;
+  font-weight: 900;
 }
 
 .main-text {
@@ -174,7 +189,6 @@ li {
     margin-right: 5rem;
     opacity: 15%;
     padding-left: 20px;
-    text-align: left;
     user-select: none;
   }
 
@@ -190,7 +204,7 @@ li {
 
   .socials {
     gap: 10px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .container {
@@ -230,4 +244,10 @@ li {
   li {
     padding-top: 20px;
   }
+}
+.react-photo-album--photo {
+  transition: 500ms;
+}
+.react-photo-album--photo:hover {
+  margin: 15px;
 }

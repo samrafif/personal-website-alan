@@ -5,12 +5,15 @@ import { Routes, Route, Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import "./App.css";
+import "yet-another-react-lightbox/styles.css";
 import Logo from "./assets/Group 15.png";
 
 import MainHeader from "./components/mainheader";
 import NotFound from "./pages/404";
 import Projects from "./pages/projects";
 import ReadMe from "./pages/readme";
+import Gallery from "./pages/gallery";
+import Project from "./pages/project";
 
 function App() {
   const location = useLocation();
@@ -85,25 +88,25 @@ function App() {
             RD
           </a>
         </nav>
-        <nav class="nav-bar">
+        <nav className="nav-bar">
           <ul>
             <li style={{ paddingTop: 0 }}>
-              <Link to="/" class={active[0]}>
+              <Link to="/" className={active[0]}>
                 HOME
               </Link>
             </li>
             <li>
-              <Link to="/projects" class={active[1]}>
+              <Link to="/projects" className={active[1]}>
                 PROJECTS
               </Link>
             </li>
             <li>
-              <Link to="/readme" class={active[2]}>
+              <Link to="/readme" className={active[2]}>
                 README
               </Link>
             </li>
             <li>
-              <Link to="/gallery" class={active[3]}>
+              <Link to="/gallery" className={active[3]}>
                 GALLERY
               </Link>
             </li>
@@ -111,10 +114,12 @@ function App() {
         </nav>
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<MainHeader />}></Route>
-            <Route path="/projects" element={<Projects />}></Route>
-            <Route path="/readme" element={<ReadMe />}></Route>
-            <Route path="/*" element={<NotFound />}></Route>
+            <Route path="/" element={<MainHeader />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/readme" element={<ReadMe />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </div>

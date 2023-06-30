@@ -8,6 +8,11 @@ body {
   margin: 0;
   font-family: clashDisplay;
   height: 100%;
+  font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {

@@ -1,4 +1,35 @@
-.readme-container {
+.readmes-container {
   padding-top: 10rem;
   padding-left: 3rem;
+}
+
+.readme-text {
+  margin-right: 55rem;
+  font-size: 24px;
+  margin-top: 0px;
+}
+
+.readme-link {
+  font-weight: 200;
+  padding-left: 1rem;
+  color: white;
+  transition: 0.5s ease-out;
+}
+
+.readme-link:hover {
+  font-weight: 900;
+}
+
+.readme-header {
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 945px) {
+  .readme-text {
+    margin-right: 3rem;
+    margin-top: 0px;
+    font-size: 20px;
+  }
 }
